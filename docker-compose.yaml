@@ -1,12 +1,8 @@
 liferay:
-  image: mdelapenya/liferay-portal:7-ce-ga3-tomcat-postgres
+  image: tkaefer/liferay-container:latest
   restart: always
   mem_limit: 3G
   memswap_limit: 3G
-  environment:
-    - VIRTUAL_HOST=euroka.info,www.euroka.info
-    - VIRTUAL_PORT=8080
-    - LETSENCRYPT_EMAIL=tobias@tkaefer.de
   links:
     - postgres:postgres
     - mail:mail
